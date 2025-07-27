@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Professional Interior Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .portfolio-item {
+            display: block;
+        }
+        input[name="filter"] {
+            display: none;
+        }
+        .filter-btn {
+            cursor: pointer;
+        }
+        input[name="filter"]:checked + label {
+            background-color: #333;
+            color: #fff;
+        }
+        input[name="filter"]:checked ~ .portfolio-grid .portfolio-item:not([data-category]) {
+            display: block;
+        }
+        input[name="filter"]:checked ~ .portfolio-grid .portfolio-item {
+            display: none;
+        }
+        input#all:checked ~ .portfolio-grid .portfolio-item {
+            display: block;
+        }
+        input#residential:checked ~ .portfolio-grid .portfolio-item:not([data-category="residential"]) {
+            display: none;
+        }
+        input#commercial:checked ~ .portfolio-grid .portfolio-item:not([data-category="commercial"]) {
+            display: none;
+        }
+        input#office:checked ~ .portfolio-grid .portfolio-item:not([data-category="office"]) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Elegance Interior Design</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-hero">
+            <h1>Our Portfolio</h1>
+            <p>Examples of our completed projects</p>
+        </section>
+
+        <section class="portfolio-filters">
+            <input type="radio" name="filter" id="all" checked hidden>
+            <input type="radio" name="filter" id="residential" hidden>
+            <input type="radio" name="filter" id="commercial" hidden>
+            <input type="radio" name="filter" id="office" hidden>
+            
+            <label for="all" class="filter-btn">All</label>
+            <label for="residential" class="filter-btn">Residential</label>
+            <label for="commercial" class="filter-btn">Commercial</label>
+            <label for="office" class="filter-btn">Office</label>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="portfolio-item" data-category="residential">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" alt="Modern House Design">
+                <div class="portfolio-overlay">
+                    <h3>Luxury Villa</h3>
+                    <p>Complete Interior Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="commercial">
+                <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da" alt="Commercial Shop Design">
+                <div class="portfolio-overlay">
+                    <h3>Modern Restaurant</h3>
+                    <p>Design and Implementation</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="office">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Office Design">
+                <div class="portfolio-overlay">
+                    <h3>Executive Office</h3>
+                    <p>Workspace Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="residential">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="Living Room Design">
+                <div class="portfolio-overlay">
+                    <h3>Residential Apartment</h3>
+                    <p>Complete Interior Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="commercial">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Cafe Design">
+                <div class="portfolio-overlay">
+                    <h3>Modern Cafe</h3>
+                    <p>Design and Implementation</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="office">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Coworking Space Design">
+                <div class="portfolio-overlay">
+                    <h3>Coworking Space</h3>
+                    <p>Innovative Design</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@elegance.com</p>
+                <p>Phone: +20 11 24111092</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elegance Interior Design. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
